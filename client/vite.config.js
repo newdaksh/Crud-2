@@ -9,4 +9,7 @@ export default defineConfig({
       '/api': 'https://crud-2-backend.onrender.com',
     },
   },
+  build: {
+    outDir: 'dist',
+  },
 });
