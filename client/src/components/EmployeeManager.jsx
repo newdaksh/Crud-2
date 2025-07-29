@@ -34,10 +34,10 @@ function EmployeeManager() {
     setSuccess('');
     try {
       if (editingId) {
-        await axios.put(`/api/employees/${editingId}`, form, authHeader);
+        await axios.put(`https://crud-2-backend.onrender.com/api/employees/${editingId}`, form, authHeader);
         setSuccess('Employee updated successfully');
       } else {
-        await axios.post('/api/employees', form, authHeader);
+        await axios.post('https://crud-2-backend.onrender.com/api/employees', form, authHeader);
         setSuccess('Employee added successfully');
       }
       setForm({ name: '', email: '', position: '', salary: '' });
@@ -57,7 +57,7 @@ function EmployeeManager() {
     setError('');
     setSuccess('');
     try {
-      await axios.delete(`/api/employees/${id}`, authHeader);
+      await axios.delete(`https://crud-2-backend.onrender.com/api/employees/${id}`, authHeader);
       setSuccess('Employee deleted successfully');
       fetchEmployees();
     } catch (err) {
