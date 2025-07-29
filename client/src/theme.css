@@ -1,0 +1,202 @@
+:root {
+  --primary: #3b82f6;
+  --primary-dark: #2563eb;
+  --accent: #f59e42;
+  --bg: #f2f6fc;
+  --white: #fff;
+  --danger: #dc2626;
+  --success: #16a34a;
+  --shadow: 0 4px 24px rgba(59,130,246,0.08);
+  --radius: 16px;
+  --font-main: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  font-family: var(--font-main);
+  color: #222;
+  margin: 0;
+}
+
+button, input {
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+button {
+  background: var(--primary);
+  color: var(--white);
+  padding: 0.65rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: var(--shadow);
+}
+button:hover {
+  background: var(--primary-dark);
+}
+
+input {
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  border: 1.5px solid #e5e7eb;
+  background: var(--white);
+  transition: border 0.2s;
+}
+input:focus {
+  border: 1.5px solid var(--primary);
+}
+
+.auth-container, .dashboard-container {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.auth-container {
+  max-width: 420px;
+  margin: 48px auto;
+  padding: 2.5rem 2rem 2rem 2rem;
+  text-align: center;
+}
+.auth-container h2 {
+  color: var(--primary-dark);
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+.auth-container button {
+  margin-top: 0.5rem;
+  width: 100%;
+}
+.auth-container .error {
+  color: var(--danger);
+  margin-top: 1rem;
+}
+.auth-container .success {
+  color: var(--success);
+  margin-top: 1rem;
+}
+.auth-container a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+.auth-container a:hover {
+  text-decoration: underline;
+}
+
+.dashboard-container {
+  max-width: 900px;
+  margin: 48px auto;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  border-radius: var(--radius);
+}
+.dashboard-container h2 {
+  color: var(--primary-dark);
+  margin-bottom: 2rem;
+}
+
+.employee-manager {
+  width: 100%;
+  overflow-x: auto;
+}
+.employee-manager form {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+  justify-content: center;
+}
+.employee-manager input, .employee-manager button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+.employee-manager table {
+  width: 100%;
+  min-width: 700px;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 1rem;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.employee-manager th, .employee-manager td {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  white-space: nowrap;
+}
+.employee-manager th {
+  background: #f1f5fb;
+  color: var(--primary-dark);
+  font-weight: 700;
+}
+.employee-manager tr:last-child td {
+  border-bottom: none;
+}
+.employee-manager button {
+  margin-right: 0.5rem;
+  background: var(--accent);
+  color: #fff;
+}
+.employee-manager button:last-child {
+  background: var(--danger);
+}
+.employee-manager .success {
+  color: var(--success);
+}
+.employee-manager .error {
+  color: var(--danger);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--primary-dark);
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 0 0 16px 16px;
+  margin-bottom: 2.5rem;
+  box-shadow: var(--shadow);
+}
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  color: var(--accent);
+}
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.navbar-links a:hover {
+  color: var(--accent);
+}
+
+/* Home landing page */
+.landing-center {
+  display: flex;
+  height: 60vh;
+  align-items: center;
+  justify-content: center;
+}
+.landing-center h2 {
+  font-size: 2.5rem;
+  color: var(--primary-dark);
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, var(--primary) 30%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
