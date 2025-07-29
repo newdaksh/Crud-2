@@ -12,7 +12,7 @@ function Register() {
     setError('');
     setSuccess('');
     try {
-      const res = await axios.post('/api/auth/register', { username, password });
+      const res = await axios.post('https://crud-2-backend.onrender.com/api/auth/register', { username, password });
       setSuccess(res.data.message);
     } catch (err) {
       setError(err.response?.data?.message || 'Registration failed');

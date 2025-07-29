@@ -13,7 +13,7 @@ function EmployeeManager() {
 
   const fetchEmployees = async () => {
     try {
-      const res = await axios.get('/api/employees', authHeader);
+      const res = await axios.get('https://crud-2-backend.onrender.com/api/employees', authHeader);
       setEmployees(res.data);
     } catch (err) {
       setError('Failed to fetch employees');
