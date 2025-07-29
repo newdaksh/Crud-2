@@ -14,7 +14,10 @@
   },
   "scripts": {
     "dev": "vite --port 5173",
-    "build": "vite build",
+    "build": "npx vite build",
     "preview": "vite preview"
+  },
+  "engines": {
+    "node": "20.x"
   }
 }
